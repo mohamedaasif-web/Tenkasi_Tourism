@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tenkasi Restaurants</title>
+ <link rel="icon" href="logo.jpeg">
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Tahoma, sans-serif;
+    }
+
+    body {
+        background: #f9f9f9;
+        color: #333;
+        animation: fadeIn 1.2s ease-in;
+    }
+
+    header {
+        background: #ff4d4d;
+        color: #fff;
+        padding: 15px 10%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+        animation: slideDown 1s ease-in-out;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: #fff;
+        margin: 0 10px;
+        font-weight: 500;
+        transition: 0.3s;
+    }
+
+    nav a:hover {
+        color: #000;
+    }
+
+    .container {
+        padding: 50px 10%;
+        animation: fadeInUp 1.5s ease;
+    }
+
+    .container h2 {
+        text-align: center;
+        font-size: 2rem;
+        color: #ff4d4d;
+        margin-bottom: 30px;
+    }
+
+    .restaurant-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+    }
+
+    .restaurant-card {
+        background: #fff;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+        animation: fadeInCard 1s ease forwards;
+        opacity: 0;
+    }
+
+    .restaurant-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        transition: transform 0.4s ease;
+    }
+
+    .restaurant-card h3 {
+        font-size: 1.3rem;
+        margin: 15px;
+        color: #333;
+    }
+
+    .restaurant-card p {
+        margin: 0 15px 15px;
+        color: #666;
+        font-size: 0.95rem;
+    }
+
+    .restaurant-card a {
+        display: inline-block;
+        margin: 0 15px 20px;
+        text-decoration: none;
+        background: #ff4d4d;
+        color: #fff;
+        padding: 10px 18px;
+        border-radius: 20px;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    .restaurant-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    .restaurant-card:hover img {
+        transform: scale(1.05);
+    }
+
+    .restaurant-card a:hover {
+        background: #e60000;
+    }
+
+    footer {
+        text-align: center;
+        padding: 15px;
+        background: #ff4d4d;
+        color: #fff;
+        margin-top: 40px;
+        animation: fadeIn 2s ease;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+
+    @keyframes slideDown {
+        from { transform: translateY(-50px); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+        from { transform: translateY(40px); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes fadeInCard {
+        from { opacity: 0; transform: translateY(30px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media(max-width: 768px){
+        header h1 { font-size: 1.4rem; }
+        nav a { font-size: 0.9rem; }
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Tenkasi Restaurants</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="#">Top Picks</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<div class="container">
+    <h2>Top Restaurants in Tenkasi</h2>
+    <div class="restaurant-list">
+        <!-- Restaurants -->
+        <div class="restaurant-card">
+            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38" alt="">
+            <h3>Sri Saravana Bhavan</h3>
+            <p>Vegetarian meals, South Indian specialties.</p>
+            <a href="https://www.google.com/maps/place/Sri+Saravana+Bavan+Veg+Restaurant/@8.9563384,77.3086469,17z/data=!3m1!4b1!4m6!3m5!1s0x3b04290047e44261:0xd60e26590fbf9935!8m2!3d8.9563384!4d77.3086469!16s%2Fg%2F11vspsr06q?entry=ttu&g_ep=EgoyMDI1MDgxOS4wIKXMDSoASAFQAw%3D%3D">View Location</a>
+        </div>
+        <div class="restaurant-card">
+            <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092" alt="">
+            <h3>Hotel Aaryas</h3>
+            <p>Pure Veg, Breakfast, Lunch & Dinner.</p>
+            <a href="https://www.google.com/maps/place/Hotel+Aryaas/@8.971197,77.3006508,18.75z/data=!4m6!3m5!1s0x3b068209a95ad019:0x8c09f24150f358c3!8m2!3d8.9710287!4d77.3013942!16s%2Fg%2F11gf8fvgvk?entry=ttu&g_ep=EgoyMDI1MDgxOS4wIKXMDSoASAFQAw%3D%3D">View Location</a>
+        </div>
+        <div class="restaurant-card">
+            <img src="https://images.unsplash.com/photo-1551218808-94e220e084d2" alt="">
+            <h3>Saaral Restaurant</h3>
+            <p>Multi-cuisine family restaurant near waterfalls.</p>
+            <a href="https://www.google.com/maps/place/Saral+Hotel/@8.9566235,77.3002358,16z/data=!4m10!1m2!2m1!1ssaaral+restaurant+Tenkasi+location!3m6!1s0x3b0429f0465daa9b:0x4ef6bf153df666be!8m2!3d8.9566235!4d77.3131104!15sCiJzYWFyYWwgcmVzdGF1cmFudCBUZW5rYXNpIGxvY2F0aW9uWhsiGXNhYXJhbCByZXN0YXVyYW50IHRlbmthc2mSAQpyZXN0YXVyYW50qgFZEAEqFSIRc2FhcmFsIHJlc3RhdXJhbnQoADIfEAEiG8MS0qrsIjL_PF8XyBNEOtij2rZb6GTt0EEmTjIdEAIiGXNhYXJhbCByZXN0YXVyYW50IHRlbmthc2ngAQA!16s%2Fg%2F11s63cp7j6?entry=ttu&g_ep=EgoyMDI1MDgxOS4wIKXMDSoASAFQAw%3D%3D">View Location</a>
+        </div>
+        <div class="restaurant-card">
+            <img src="Tenkasi Tourist Places 🏞️_files/Annapurna.jpg" alt="">
+            <h3>Annapoorna Mess</h3>
+            <p>Authentic South Indian meals at affordable price.</p>
+            <a href="https://www.google.com/maps/place/Annapurna+Mess/@8.960054,77.3057249,17z/data=!4m14!1m7!3m6!1s0x3b04290057400121:0x14ffe11ebbaa7c84!2sAnnapurna+Mess!8m2!3d8.9600487!4d77.3082998!16s%2Fg%2F11ln4l3d1f!3m5!1s0x3b04290057400121:0x14ffe11ebbaa7c84!8m2!3d8.9600487!4d77.3082998!16s%2Fg%2F11ln4l3d1f?entry=ttu&g_ep=EgoyMDI1MDgxOS4wIKXMDSoASAFQAw%3D%3D">View Location</a>
+        </div>
+        <div class="restaurant-card">
+            <img src="https://images.unsplash.com/photo-1543353071-873f17a7a088" alt="">
+            <h3>Aasife Biryani</h3>
+            <p>Famous for Hyderabadi Biryani & Mughlai dishes.</p>
+            <a href="https://www.google.com/maps/place/Aasife+Biriyani+-+Tenkasi/@8.9557598,77.3022717,17z/data=!4m14!1m7!3m6!1s0x3b0429e18d6b9a23:0xfc5c6a98d869a150!2sAasife+Biriyani+-+Tenkasi!8m2!3d8.9557598!4d77.3048466!16s%2Fg%2F11g2_6ly7x!3m5!1s0x3b0429e18d6b9a23:0xfc5c6a98d869a150!8m2!3d8.9557598!4d77.3048466!16s%2Fg%2F11g2_6ly7x?entry=ttu&g_ep=EgoyMDI1MDgxOS4wIKXMDSoASAFQAw%3D%3D">View Location</a>
+        </div>
+        <div class="restaurant-card">
+            <img src="https://images.unsplash.com/photo-1627308595229-7830a5c91f9f" alt="">
+            <h3>Taj Tandoor</h3>
+            <p>North Indian tandoori and kebab specialties.</p>
+            <a href="https://www.google.com/maps/place/New+Taj+Restaurant+A%2FC/@8.9892098,77.2229505,13z/data=!4m10!1m2!2m1!1sTaj+Tandoor+Tenkasi+location!3m6!1s0x3b0683422da412af:0xbe8d5a521d0b65a0!8m2!3d8.9892098!4d77.2950483!15sChxUYWogVGFuZG9vciBUZW5rYXNpIGxvY2F0aW9uWhUiE3RhaiB0YW5kb29yIHRlbmthc2mSARhpbmRpYW5fbXVzbGltX3Jlc3RhdXJhbnSqAU0QASoPIgt0YWogdGFuZG9vcigAMh8QASIb56l8IZ0c18GpFz84GCWYZwacXqkoon-9o9O4MhcQAiITdGFqIHRhbmRvb3IgdGVua2FzaeABAA!16s%2Fg%2F11h15_d75l?entry=ttu&g_ep=EgoyMDI1MDgxOS4wIKXMDSoASAFQAw%3D%3D">View Location</a>
+        </div>
+        <div class="restaurant-card">
+            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836" alt="">
+            <h3>Western Grill</h3>
+            <p>Steaks, burgers, and continental dishes.</p>
+            <a href="https://www.google.com/maps/place/Greens+Land+Restaurant/@8.9893748,77.2229504,13z/data=!4m10!1m2!2m1!1sWestern+Grillr+Tenkasi+location!3m6!1s0x3b0429e20a7281a3:0xa3590231403aaf24!8m2!3d8.9689068!4d77.3024675!15sCh9XZXN0ZXJuIEdyaWxsciBUZW5rYXNpIGxvY2F0aW9uWhgiFndlc3Rlcm4gZ3JpbGxyIHRlbmthc2mSARdzb3V0aF9pbmRpYW5fcmVzdGF1cmFudOABAA!16s%2Fg%2F1hjglk7kx?entry=ttu&g_ep=EgoyMDI1MDgxOS4wIKXMDSoASAFQAw%3D%3D">View Location</a>
+        </div>
+        <div class="restaurant-card">
+            <img src="https://images.unsplash.com/photo-1546069901-eacef0df6022" alt="">
+            <h3>Sai Krishna Hotel</h3>
+            <p>Budget-friendly vegetarian meals and snacks.</p>
+            <a href="https://www.google.com/maps/place/Hotel+Krishna+tourist+home+Tenkasi/@8.9579665,77.3032969,17z/data=!4m10!3m9!1s0x3b0429e89cd33033:0x52579e1843f9fbed!5m3!1s2025-08-24!4m1!1i2!8m2!3d8.9579612!4d77.3058718!16s%2Fg%2F1tfz8mcj?entry=ttu&g_ep=EgoyMDI1MDgxOS4wIKXMDSoASAFQAw%3D%3D">View Location</a>
+        </div>
+        <div class="restaurant-card">
+            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836" alt="">
+            <h3>Raj Mess</h3>
+            <p>Coffee, snacks,Tea,Doase,idly and quick bites in a cozy ambiance.</p>
+            <a href="https://www.google.com/maps/place/Raj+Mess/@8.956803,77.3059975,17z/data=!3m1!4b1!4m6!3m5!1s0x3b0429e88d312437:0xde8fe07386b3922!8m2!3d8.956803!4d77.3059975!16s%2Fg%2F11g_cbc89?entry=ttu&g_ep=EgoyMDI1MDgxOS4wIKXMDSoASAFQAw%3D%3D">View Location</a>
+        </div>
+        <div class="restaurant-card">
+            <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092" alt="">
+            <h3>Hotel Tamilnadu</h3>
+            <p>Govt. tourism hotel with traditional South Indian menu.</p>
+            <a href="https://www.google.com/maps/place/Hotel+Tamilnadu+Courtallam/@8.9407702,77.2785975,17z/data=!4m10!3m9!1s0x3b042a2425555555:0x7ac6408dc413ae25!5m3!1s2025-08-24!4m1!1i2!8m2!3d8.9407649!4d77.2811724!16s%2Fg%2F11c51wvy3m?entry=ttu&g_ep=EgoyMDI1MDgxOS4wIKXMDSoASAFQAw%3D%3D">View Location</a>
+        </div>
+        <div class="restaurant-card">
+            <img src="https://images.unsplash.com/photo-1550547660-d9450f859349" alt="">
+            <h3>Priya Mess</h3>
+            <p>Home-style meals with fresh local ingredients.</p>
+            <a href="https://www.google.com/maps/place/Priya+Mess/@9.9858878,76.5479808,8z/data=!4m13!1m5!2m4!1sPriya+Mess+tenkasi!5m2!5m1!1s2025-08-24!3m6!1s0x3b00cf749cae9783:0xb48387720769e672!8m2!3d9.9195766!4d78.0946332!15sChJQcml5YSBNZXNzIHRlbmthc2laFCIScHJpeWEgbWVzcyB0ZW5rYXNpkgEKcmVzdGF1cmFudKoBSxABKg4iCnByaXlhIG1lc3MoADIfEAEiG8n92kq45u73cRHGzii5iiwfHRL0iR2EbyezaDIWEAIiEnByaXlhIG1lc3MgdGVua2FzaeABAA!16s%2Fg%2F11l27061b4?entry=ttu&g_ep=EgoyMDI1MDgxOS4wIKXMDSoASAFQAw%3D%3D">View Location</a>
+        </div>
+        <div class="restaurant-card">
+            <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187" alt="">
+            <h3>Pizza Zone</h3>
+            <p>Delicious pizzas, burgers, and fast food items.</p>
+            <a href="https://www.google.com/maps/place/Feast+Pizza+-+Tenkasi/@8.9712171,77.2854862,14z/data=!4m10!1m2!2m1!1sPizza+Zone+tenkasi!3m6!1s0x3b04293267c02797:0x2c8983993d268b1!8m2!3d8.9551205!4d77.3105148!15sChJQaXp6YSBab25lIHRlbmthc2laFCIScGl6emEgem9uZSB0ZW5rYXNpkgEQcGl6emFfcmVzdGF1cmFudKoBShABKg4iCnBpenphIHpvbmUoADIeEAEiGldjOcRXfw5et783OhAMX1cwY-eqklJ7dQx_MhYQAiIScGl6emEgem9uZSB0ZW5rYXNp4AEA!16s%2Fg%2F11j_8mf4bx?entry=ttu&g_ep=EgoyMDI1MDgxOS4wIKXMDSoASAFQAw%3D%3D">View Location</a>
+        </div>
+        <div class="restaurant-card">
+            <img src="Tenkasi Tourist Places 🏞️_files/Bakers Hub.jpg" alt="">
+            <h3>Bakers Hub</h3>
+            <p>Cakes, pastries, and fresh baked goodies.</p>
+            <a href="https://www.google.com/maps/place/Subash+Sweets+%26+Bakery+(B2)/@8.9678433,77.3006551,17z/data=!4m6!3m5!1s0x3b0429e21b90592f:0xc7a24ae135f653d5!8m2!3d8.967838!4d77.30323!16s%2Fg%2F11cnc0z2_3?entry=ttu&g_ep=EgoyMDI1MDgxOS4wIKXMDSoASAFQAw%3D%3D">View Location</a>
+        </div>
+        <div class="restaurant-card">
+            <img src="https://images.unsplash.com/photo-1550547660-d9450f859349" alt="">
+            <h3>Hotel Vairamaligai</h3>
+            <p>Family-friendly dining with multi-cuisine options.</p>
+            <a href="https://www.google.com/maps/place/Vairamaligai+Rooftop+Restaurant/@8.7154319,77.6840997,13z/data=!4m10!1m2!2m1!1sHotel+Vairamaligai+Tenkasi!3m6!1s0x3b040dddd7d5766f:0x97f9ebd61eb95a42!8m2!3d8.7155535!4d77.763907!15sChpIb3RlbCBWYWlyYW1hbGlnYWkgVGVua2FzaVocIhpob3RlbCB2YWlyYW1hbGlnYWkgdGVua2FzaZIBEmJpcnlhbmlfcmVzdGF1cmFudJoBJENoZERTVWhOTUc5blMwVkpRMEZuU1VNMmVUUlFTSEIzUlJBQqoBWxABKhYiEmhvdGVsIHZhaXJhbWFsaWdhaSgAMh8QASIb3N6-Fqc-T_lQ09ySEBF8w0kA5jJDYuqrlPrqMh4QAiIaaG90ZWwgdmFpcmFtYWxpZ2FpIHRlbmthc2ngAQD6AQQIABAw!16s%2Fg%2F11qgy6qlcd?entry=ttu&g_ep=EgoyMDI1MDgxOS4wIKXMDSoASAFQAw%3D%3D">View Location</a>
+        </div>
+        <div class="restaurant-card">
+            <img src="https://images.unsplash.com/photo-1546069901-eacef0df6022" alt="">
+            <h3>Elite Cafe</h3>
+            <p>Modern cafe for coffee lovers and quick bites.</p>
+            <a href="https://www.google.com/maps/place/The+Elite+Tea+Cafeteria/@9.936668,77.5698933,10z/data=!4m10!1m2!2m1!1sElite+Cafe+Tenkasi!3m6!1s0x3b00c5007b3e73e1:0x4395583e341fb2fc!8m2!3d9.936668!4d78.1466755!15sChJFbGl0ZSBDYWZlIFRlbmthc2kiK1IpL2dlby90eXBlL2VzdGFibGlzaG1lbnRfcG9pL2ZlZWxzX3Vwc2NhbGWSAQl0ZWFfc3RvcmWqAUUQASoIIgRjYWZlKAAyHxABIhveWNgo3_OJOi2nwd98k-ovjDVnjYoUJGEnN1AyFhACIhJlbGl0ZSBjYWZlIHRlbmthc2ngAQA!16s%2Fg%2F11yczsxcx2?entry=ttu&g_ep=EgoyMDI1MDgxOS4wIKXMDSoASAFQAw%3D%3D">View Location</a>
+        </div>
+    </div>
+</div>
+
+<footer>
+     <section id="contact">
+        <h2>Contact Us</h2>
+        <p style="text-align:center;">For travel packages, guides, and more information, visit <a href="#">our
+                website</a>.</p>
+    </section>
+    <p>&copy; 2025 Tenkasi Food Guide | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
